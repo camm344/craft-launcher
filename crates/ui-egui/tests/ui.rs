@@ -1338,8 +1338,8 @@ fn hostile_release_asset_urls_never_reach_the_opener() {
 }
 
 #[test]
-fn discord_link_uses_web_invite_even_when_discord_is_installed() {
-    let (mut h, _) = harness_with_discord(Some(artcraft_launcher_core::catalog::DISCORD_APP_URL));
+fn discord_link_uses_the_host_web_invite() {
+    let (mut h, _) = harness_with_discord(Some(artcraft_launcher_core::catalog::DISCORD_URL));
     h.run_steps(6);
     assert_eq!(click_opens(&mut h, "Discord").as_deref(), Some("https://discord.com/invite/artcraft"));
 }

@@ -644,7 +644,7 @@ mod discord_tests {
     }
 
     #[test]
-    fn discord_url_gives_app_or_web_url() {
+    fn discord_url_uses_web_invite() {
         use artcraft_launcher_core::catalog::DISCORD_URL;
         assert_eq!(discord_url(), DISCORD_URL);
     }
